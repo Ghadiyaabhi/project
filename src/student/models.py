@@ -32,4 +32,10 @@ class Students(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
+class Staffs(models.Model): 
+    id = models.AutoField(primary_key=True) 
+    admin = models.OneToOneField(CustomUser, on_delete = models.CASCADE) 
+    address = models.TextField() 
+    created_at = models.DateTimeField(auto_now_add=True) 
+    updated_at = models.DateTimeField(auto_now=True) 
     
