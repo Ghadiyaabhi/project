@@ -13,6 +13,8 @@ class CustomUser(AbstractUser):
   
     user_type_data = ((HOD, "HOD"), (STAFF, "Staff"), (STUDENT, "Student")) 
     user_type = models.CharField(default=1, choices=user_type_data, max_length=10) 
+
+
 class Courses(models.Model): 
     id = models.AutoField(primary_key=True) 
     course_name = models.CharField(max_length=255) 
