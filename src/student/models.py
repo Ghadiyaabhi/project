@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser 
+
+
 class CustomUser(AbstractUser): 
+   
     HOD = '1'
     STAFF = '2'
     STUDENT = '3'
@@ -28,7 +31,7 @@ class Students(models.Model):
     gender = models.CharField(max_length=50) 
     profile_pic = models.FileField() 
     address = models.TextField() 
-    course_id = models.ForeignKey(Courses, on_delete=models.DO_NOTHING, default=1) 
+    course_id = models.ForeignKey(Courses, on_delete=models.CASCADE, default=1) 
     updated_at = models.DateTimeField(auto_now=True)
 
 
