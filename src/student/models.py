@@ -18,24 +18,25 @@ class CustomUser(AbstractUser):
     user_type = models.CharField(default=1, choices=user_type_data, max_length=10) 
 
 
-class Courses(models.Model): 
+class Course(models.Model): 
     id = models.AutoField(primary_key=True) 
     course_name = models.CharField(max_length=255) 
     created_at = models.DateTimeField(auto_now_add=True) 
     updated_at = models.DateTimeField(auto_now=True) 
-    objects = models.Manager() 
+    
 
 
-class Students(models.Model): 
+class Student(models.Model): 
     id = models.AutoField(primary_key=True) 
+    name = models.CharField(max_length=100)
     gender = models.CharField(max_length=50) 
     profile_pic = models.FileField() 
     address = models.TextField() 
-    course_id = models.ForeignKey(Courses, on_delete=models.CASCADE, default=1) 
+    course_id = models.ForeignKey(Course, on_delete=models.CASCADE, default=1) 
     updated_at = models.DateTimeField(auto_now=True)
 
 
-class Staffs(models.Model): 
+class Staff(models.Model): 
     id = models.AutoField(primary_key=True) 
     admin = models.OneToOneField(CustomUser, on_delete = models.CASCADE) 
     address = models.TextField() 
