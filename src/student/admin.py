@@ -11,6 +11,5 @@ class studentAdmin(admin.ModelAdmin):
         "gender",
         "profile_pic",
         "address",
-        "created_at",
-        "updated_at",
+        
     ]
