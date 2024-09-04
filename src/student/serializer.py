@@ -7,3 +7,14 @@ class StudentsSerializer(serializers.ModelSerializer):
         model = Students
         fields = '__all__' 
         
+
+# class PrincipleSerialzer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Principle
+#         fields = "__all__"        
+
+
+# class CourseSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Course
+#         fields = "__all__"
