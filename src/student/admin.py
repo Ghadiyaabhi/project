@@ -1,12 +1,6 @@
-from django.contrib import admin
-
-from .models import Students
+from django.contrib import admindocs
 
 
-@admin.register(Students)
-class studentAdmin(admin.ModelAdmin):
-    model = Students
-    list_display = ["id","gender","address","name"]
 
 
 # @admin.register(Course)
