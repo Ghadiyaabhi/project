@@ -79,11 +79,19 @@ WSGI_APPLICATION = "college_management.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+=======
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+>>>>>>> d5f77102a1aaed22063277e1dec3ebdc44c9a812
 #     "default": {
 #         "ENGINE": "django.db.backends.postgresql",
 #         "NAME": "postgres",
