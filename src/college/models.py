@@ -9,3 +9,6 @@ class Student(models.Model):
 
 
 
+class Course(models.Model):
+    course_name = models.CharField(max_length=100)
+    course_id = models.IntegerField()
